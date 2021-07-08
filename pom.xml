@@ -23,4 +23,9 @@
       <version>20210307</version>
 	</dependency>
   </dependencies>
+  <properties>
+    <sonar.projectKey>ShockGiammy_Deliverable1</sonar.projectKey>
+    <sonar.organization>shockgiammy</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  </properties>
 </project>
