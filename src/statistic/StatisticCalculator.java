@@ -91,7 +91,7 @@ public class StatisticCalculator {
 				else
 					logger.log(Level.INFO, "Il file {0} non può essere creato", path);
 			} catch (IOException e) {
-				e.printStackTrace();
+				logger.log(Level.SEVERE, "Something went wrong: {0} ", e.toString());
 		}
 		try (
 				var writer = new BufferedWriter(new FileWriter(file));
@@ -104,7 +104,7 @@ public class StatisticCalculator {
 			}
 			writer.flush();
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.log(Level.SEVERE, "Something went wrong: {0} ", e.toString());
 		}
 	}
 }
