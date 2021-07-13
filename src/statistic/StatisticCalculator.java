@@ -78,8 +78,8 @@ public class StatisticCalculator {
 	
 	public void writeFile(Logger logger) {
 		var delimiter = ";";
-		var user = "Gian Marco\\";
-		String path = "C:\\Users\\" +  user + "Desktop\\CSVdata.csv";
+		var user = "Gian Marco/";
+		String path = "C:/Users/" +  user + "Desktop/CSVdata.csv";
 		File file;
 		file = new File(path);
 		if (file.exists())
