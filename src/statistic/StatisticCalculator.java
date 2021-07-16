@@ -17,7 +17,7 @@ public class StatisticCalculator {
 	List<Integer> tickets = new ArrayList<>();
 	List<String> orderedDates = new ArrayList<>();
 
-	public StatisticCalculator(int entries, List<String> listDate) {
+	public StatisticCalculator(String projName, int entries, List<String> listDate) {
 		
 		var logger = Logger.getLogger(StatisticCalculator.class.getName());
 		var i = 0;
@@ -46,7 +46,7 @@ public class StatisticCalculator {
 		logger.log(Level.INFO, "The lower bound is: {0}\n", lowerBound);
 		logger.log(Level.INFO, "The upper bound is: {0}\n", upperBound);
 		
-		writeFile(logger);
+		writeFile(projName, logger);
 	}
 	
 	public double calculateMean() {
@@ -76,10 +76,10 @@ public class StatisticCalculator {
 		}
 	}
 	
-	public void writeFile(Logger logger) {
+	public void writeFile(String projName, Logger logger) {
 		var delimiter = ";";
 		var user = "Gian Marco/";
-		String path = "C:/Users/" +  user + "Desktop/CSVdata.csv";
+		String path = "C:/Users/" +  user + "Desktop/CSVdata_" + projName + ".csv";
 		File file;
 		file = new File(path);
 		if (file.exists())

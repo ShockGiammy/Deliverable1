@@ -81,6 +81,6 @@ public class RetrieveTicketsID {
          }  
       } while (i < total);
 	  listDate.sort(null);
-	  new StatisticCalculator(total, listDate);
+	  new StatisticCalculator(projName, total, listDate);
    }
 }
